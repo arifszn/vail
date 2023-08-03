@@ -32,19 +32,6 @@ const initCommand = async () => {
 
   const selectedNodeVersion = nodeVersionAnswer.nodeVersion;
 
-  // Ask the user to select the package manager
-  const packageManagerAnswer = await inquirer.prompt([
-    {
-      type: 'list',
-      name: 'packageManager',
-      message: 'Select package manager:',
-      choices: ['npm', 'yarn'],
-      default: 'npm',
-    },
-  ]);
-
-  const selectedPackageManager = packageManagerAnswer.packageManager;
-
   // Ask the user to select the services
   const servicesAnswer = await inquirer.prompt([
     {
