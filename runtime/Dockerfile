@@ -1,7 +1,28 @@
+FROM ubuntu:22.04
+
+LABEL maintainer="Ariful Alam"
+
 ARG VAIL_NODE_VERSION
 
-# Use the official Node.js base image for the desired version
-FROM node:${VAIL_NODE_VERSION}
-
-# Set the working directory in the container
 WORKDIR /var/www/html
+
+ENV DEBIAN_FRONTEND noninteractive
+ENV TZ=UTC
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+RUN apt-get update \
+    && apt-get install -y gnupg gosu curl ca-certificates zip unzip git \
+    && apt-get update \
+    && curl -sLS https://deb.nodesource.com/setup_$VAIL_NODE_VERSION.x | bash - \
+    && apt-get install -y nodejs \
+    && npm install -g npm \
+    && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /etc/apt/keyrings/yarn.gpg >/dev/null \
+    && echo "deb [signed-by=/etc/apt/keyrings/yarn.gpg] https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list \
+    && apt-get update \
+    && apt-get install -y yarn \
+    && apt-get -y autoremove \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+CMD echo "Vail is ready to be used!"
