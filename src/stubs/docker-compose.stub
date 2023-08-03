@@ -1,0 +1,15 @@
+version: '3'
+services:
+    app:
+        build:
+            context: ./node_modules/vail/runtime
+            dockerfile: ./Dockerfile
+        ports:
+            - '${APP_PORT:-3000}:3000'
+        volumes:
+            - .:/var/www/html
+        networks:
+            - vail
+networks:
+    vail:
+        driver: bridge
