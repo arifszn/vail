@@ -10,7 +10,7 @@ const {
 } = require('../constants/services');
 
 const initCommand = async () => {
-  const dockerComposePath = path.resolve(__dirname, 'docker-compose.yml');
+  const dockerComposePath = path.resolve(process.cwd(), 'docker-compose.yml');
 
   // check if docker-compose.yml is already present
   if (fs.existsSync(dockerComposePath)) {
@@ -58,35 +58,33 @@ const initCommand = async () => {
 
   const selectedServices = servicesAnswer.services;
 
-  let dockerfileContext = './node_modules/vail/runtime';
+  let dockerfileContext = `./node_modules/vail/runtime`;
   if (!fs.existsSync(dockerfileContext)) {
-    dockerfileContext = './runtime';
-    if (!fs.existsSync(dockerfileContext)) {
-      displayErrorMessage('No Dockerfile found.');
+    displayErrorMessage('No Dockerfile found.');
 
-      process.exit(0);
-    }
+    process.exit(0);
   }
 
   let dockerComposeContent = `
 version: '3'
 services:
-    app:
-        build:
-            context: ${dockerfileContext}
-            dockerfile: ./Dockerfile
-        ports:
-            - '\${APP_PORT:-3000}:3000'
-        volumes:
-            - .:/var/www/html
-        networks:
-            - vail
-        environment:
-            NODE_VERSION: ${selectedNodeVersion}
-            PACKAGE_MANAGER: ${selectedPackageManager}
+  app:
+    build:
+      context: ${dockerfileContext}
+      dockerfile: ./Dockerfile
+      args:
+        VAIL_NODE_VERSION: ${selectedNodeVersion}
+    ports:
+      - '\${APP_PORT:-3000}:3000'
+    volumes:
+      - .:/var/www/html
+    networks:
+      - vail
+
 networks:
-    vail:
-        driver: bridge
+  vail:
+    driver: bridge
+
 `;
 
   /* if (selectedServices.includes(MY_SQL)) {
