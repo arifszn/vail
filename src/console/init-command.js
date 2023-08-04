@@ -114,11 +114,10 @@ services:
         VAIL_NODE_VERSION: ${selectedNodeVersion}
     command: ${serverStartCommand}
     ports:
-      ${ports
-        .map((port) => `- '\${APP_PORT:-${port}}:${port}'`)
-        .join('\n      ')}
+      ${ports.map((port) => `- '${port}:${port}'`).join('\n      ')}
     volumes:
       - .:/var/www/html
+      - /var/www/html/node_modules
     networks:
       - vail
 

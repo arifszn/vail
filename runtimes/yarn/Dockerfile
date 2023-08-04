@@ -25,12 +25,13 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Install dependencies
+COPY package.json ./
+RUN cp yarn-lock.json ./ || true
+RUN yarn install
+
 COPY node_modules/vail/runtimes/start-container /usr/local/bin/start-container
 RUN chmod +x /usr/local/bin/start-container
-
-# Install dependencies
-COPY . ./
-RUN yarn install
 
 ENTRYPOINT ["start-container"]
 
