@@ -32,6 +32,31 @@ const initCommand = async () => {
 
   const selectedNodeVersion = nodeVersionAnswer.nodeVersion;
 
+  // Ask the user to input the server start command
+  const serverCommandAnswer = await inquirer.prompt([
+    {
+      type: 'input',
+      name: 'command',
+      message: 'Enter the command to run your server (e.g., npm run dev):',
+      default: 'npm run dev',
+    },
+  ]);
+
+  const serverStartCommand = serverCommandAnswer.command;
+
+  // Ask the user to input the ports
+  const portsAnswer = await inquirer.prompt([
+    {
+      type: 'input',
+      name: 'ports',
+      message:
+        'Enter the ports to be used, separated by comma (e.g., 3000,3001):',
+      default: '3000',
+    },
+  ]);
+
+  const ports = portsAnswer.ports.split(',').map((port) => port.trim());
+
   // Ask the user to select the services
   const servicesAnswer = await inquirer.prompt([
     {
@@ -61,8 +86,11 @@ services:
       dockerfile: ./Dockerfile
       args:
         VAIL_NODE_VERSION: ${selectedNodeVersion}
+    command: ${serverStartCommand}
     ports:
-      - '\${APP_PORT:-3000}:3000'
+      ${ports
+        .map((port) => `- '\${APP_PORT:-${port}}:${port}'`)
+        .join('\n      ')}
     volumes:
       - .:/var/www/html
     networks:

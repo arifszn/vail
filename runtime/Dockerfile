@@ -25,4 +25,11 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+COPY start-container /usr/local/bin/start-container
+RUN chmod +x /usr/local/bin/start-container
+
+EXPOSE 8000
+
+ENTRYPOINT ["start-container"]
+
 CMD echo "Vail is ready to be used!"
