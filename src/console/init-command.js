@@ -12,11 +12,21 @@ const {
 const initCommand = async () => {
   const dockerComposePath = path.resolve(process.cwd(), 'docker-compose.yml');
 
-  // check if docker-compose.yml is already present
+  // Check if docker-compose.yml is already present
   if (fs.existsSync(dockerComposePath)) {
-    displayErrorMessage('docker-compose.yml already exists.');
+    const overwriteAnswer = await inquirer.prompt([
+      {
+        type: 'confirm',
+        name: 'overwrite',
+        message: 'docker-compose.yml already exists. Do you want to overwrite?',
+        default: false,
+      },
+    ]);
 
-    process.exit(0);
+    if (!overwriteAnswer.overwrite) {
+      displayErrorMessage('Exiting...');
+      process.exit(0);
+    }
   }
 
   // Ask the user to select the Node.js version
@@ -32,13 +42,29 @@ const initCommand = async () => {
 
   const selectedNodeVersion = nodeVersionAnswer.nodeVersion;
 
+  // Ask the user to select the package manager
+  const packageManagerAnswer = await inquirer.prompt([
+    {
+      type: 'list',
+      name: 'packageManager',
+      message: 'Select package manager:',
+      choices: ['npm', 'yarn'],
+      default: 'npm',
+    },
+  ]);
+
+  const selectedPackageManager = packageManagerAnswer.packageManager;
+
   // Ask the user to input the server start command
   const serverCommandAnswer = await inquirer.prompt([
     {
       type: 'input',
       name: 'command',
-      message: 'Enter the command to run your server (e.g., npm run dev):',
-      default: 'npm run dev',
+      message: `Enter the command to run your server (e.g., ${
+        selectedPackageManager === 'yarn' ? 'yarn run dev' : 'npm run dev'
+      }):`,
+      default:
+        selectedPackageManager === 'yarn' ? 'yarn run dev' : 'npm run dev',
     },
   ]);
 
@@ -70,8 +96,8 @@ const initCommand = async () => {
 
   const selectedServices = servicesAnswer.services;
 
-  let dockerfileContext = `./node_modules/vail/runtime`;
-  if (!fs.existsSync(dockerfileContext)) {
+  let dockerfileLocation = `./node_modules/vail/runtimes/${selectedPackageManager}`;
+  if (!fs.existsSync(dockerfileLocation)) {
     displayErrorMessage('No Dockerfile found.');
 
     process.exit(0);
@@ -82,8 +108,8 @@ version: '3'
 services:
   app:
     build:
-      context: ${dockerfileContext}
-      dockerfile: ./Dockerfile
+      context: .
+      dockerfile: ${dockerfileLocation}/Dockerfile
       args:
         VAIL_NODE_VERSION: ${selectedNodeVersion}
     command: ${serverStartCommand}

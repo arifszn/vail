@@ -25,10 +25,12 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY start-container /usr/local/bin/start-container
+COPY node_modules/vail/runtimes/start-container /usr/local/bin/start-container
 RUN chmod +x /usr/local/bin/start-container
 
-EXPOSE 8000
+# Install dependencies
+COPY . ./
+RUN npm install
 
 ENTRYPOINT ["start-container"]
 
