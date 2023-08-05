@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/arifszn/vail/assets/45073703/bde143bf-2007-402d-b8b0-e2b8f3298e86" width="8%">
+    <img src="https://github.com/arifszn/vail/assets/45073703/25c6ad3a-5992-4afd-9232-5e394b53927c" width="8%">
   <h1 align="center">Vail</h1>
 
   <h4 align="center">Dockerize Your JavaScript/TypeScript Apps Effortlessly.</h4>
@@ -35,7 +35,7 @@
   </p>
 </p>
 
-![a4a5350ceb5d13c06ac599ebe82ce1a56a911e88](https://github.com/arifszn/vail/assets/45073703/41af5e4e-9b63-45e9-be98-2b64a9eb5798)
+![preview](https://github.com/arifszn/vail/assets/45073703/245f4f93-6c8b-4fd6-8683-8bd713a0f3f7)
 
 ## Introduction
 
