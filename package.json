@@ -1,6 +1,6 @@
 {
   "name": "vail",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Dockerize Your JavaScript/TypeScript Apps Effortlessly.",
   "license": "MIT",
   "author": "arifszn",
@@ -20,7 +20,10 @@
     "prettier": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}'",
     "prettier:fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'"
   },
-  "keywords": [],
+  "files": [
+    "src",
+    "runtimes"
+  ],
   "dependencies": {
     "child_process": "^1.0.2",
     "inquirer": "^8.2.6"
@@ -30,5 +33,38 @@
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.1"
-  }
+  },
+  "keywords": [
+    "docker",
+    "dockerize",
+    "javascript",
+    "typescript",
+    "development environment",
+    "vail",
+    "laravel sail",
+    "npm",
+    "yarn",
+    "docker-compose",
+    "node.js",
+    "web development",
+    "backend",
+    "devops",
+    "containerization",
+    "microservices",
+    "node modules",
+    "package management",
+    "application setup",
+    "development tools",
+    "coding environment",
+    "dockerfile",
+    "docker image",
+    "docker container",
+    "node package",
+    "node application",
+    "typescript development",
+    "javascript development",
+    "docker development",
+    "docker deployment",
+    "docker orchestration"
+  ]
 }
