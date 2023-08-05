@@ -16,6 +16,7 @@
   },
   "keywords": [],
   "dependencies": {
+    "child_process": "^1.0.2",
     "inquirer": "^8.2.6"
   }
 }
