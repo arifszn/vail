@@ -42,7 +42,7 @@ const initCommand = async () => {
     {
       type: 'list',
       name: 'packageManager',
-      message: 'Select package manager:',
+      message: 'Select your package manager:',
       choices: ['npm', 'yarn'],
       default: 'npm',
     },
@@ -98,8 +98,7 @@ const initCommand = async () => {
     process.exit(1);
   }
 
-  let dockerComposeContent = `
-version: '3'
+  let dockerComposeContent = `version: '3'
 services:
   app:
     build:
@@ -119,7 +118,6 @@ services:
 networks:
   vail:
     driver: bridge
-
 `;
 
   /* if (selectedServices.includes(MY_SQL)) {
