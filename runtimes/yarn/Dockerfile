@@ -27,7 +27,7 @@ RUN apt-get update \
 
 # Install dependencies
 COPY package.json ./
-RUN cp yarn-lock.json ./ || true
+RUN cp yarn.lock ./ || true
 RUN yarn install
 
 COPY node_modules/vail/runtimes/start-container /usr/local/bin/start-container
