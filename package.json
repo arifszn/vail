@@ -1,7 +1,7 @@
 {
   "name": "vail",
   "version": "1.0.0",
-  "description": "Docker files for running a Nodejs application.",
+  "description": "Dockerize Your JavaScript/TypeScript Apps Effortlessly.",
   "license": "MIT",
   "author": "arifszn",
   "repository": {
