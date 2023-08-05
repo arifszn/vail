@@ -93,7 +93,7 @@ To stop all of the containers, you may simply press Control + C to stop the cont
 
 ### Customization
 
-Since Vail is just Docker, you are free to customize nearly everything about it. After the installation, you may wish to change the env values or change the image names in the `docker-compose.yml`` file. After doing so, rebuild your application's containers using the build command.
+Since Vail is just Docker, you are free to customize nearly everything about it. After the installation, you may wish to change the env values or change the command to start your server in the `docker-compose.yml`` file. After doing so, rebuild your application's containers using the build command.
 
 ```sh
 ./node_modules/.bin/vail build --no-cache
@@ -103,7 +103,11 @@ Since Vail is just Docker, you are free to customize nearly everything about it.
 
 Vail supports all Docker Compose commands. You can use them as you would normally do with Docker Compose.
 
-And that's it! Vail is now installed and set up in your application. Enjoy coding!
+Additionally, you can use Vail to run any command within the context of your application's containers. For example, to check the Node.js version installed in your app container, you can run:
+
+```sh
+./node_modules/.bin/vail exec app node --version
+```
 
 ## Support
 
