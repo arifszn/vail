@@ -100,7 +100,7 @@ const initCommand = async () => {
   if (!fs.existsSync(dockerfileLocation)) {
     displayErrorMessage('No Dockerfile found.');
 
-    process.exit(0);
+    process.exit(1);
   }
 
   let dockerComposeContent = `
