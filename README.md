@@ -37,7 +37,6 @@
 
 ![preview](https://github.com/arifszn/vail/assets/45073703/245f4f93-6c8b-4fd6-8683-8bd713a0f3f7)
 
-
 ## Introduction
 
 **Vail** provides a Docker powered local development experience for JavaScript/TypeScript Apps that is compatible with macOS, Windows (WSL2), and Linux. Other than Docker, no software or libraries are required to be installed on your local computer before using Vail. Vail's simple CLI means you can start building your application <!-- with MySQL, PostgreSQL, Redis --> without any previous Docker experience.
