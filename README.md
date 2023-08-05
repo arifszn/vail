@@ -10,9 +10,9 @@
     <a href="https://www.npmjs.com/package/vail">
       <img src="https://img.shields.io/npm/v/vail"/>
     </a>
-    <a href="https://www.npmjs.com/package/vail">
+   <!--  <a href="https://www.npmjs.com/package/vail">
       <img src="https://img.shields.io/npm/dt/vail"/>
-    </a>
+    </a> -->
     <a href="https://github.com/arifszn/vail/actions/workflows/test.yml">
       <img src="https://github.com/arifszn/vail/actions/workflows/test.yml/badge.svg"/>
     </a>
@@ -39,7 +39,7 @@
 
 ## Introduction
 
-**Vail** provides a Docker powered local development experience for JavaScript/TypeScript Apps that is compatible with macOS, Windows (WSL2), and Linux. Other than Docker, no software or libraries are required to be installed on your local computer before using Vail. Vail's simple CLI means you can start building your application with MySQL, PostgreSQL, Redis without any previous Docker experience.
+**Vail** provides a Docker powered local development experience for JavaScript/TypeScript Apps that is compatible with macOS, Windows (WSL2), and Linux. Other than Docker, no software or libraries are required to be installed on your local computer before using Vail. Vail's simple CLI means you can start building your application <!-- with MySQL, PostgreSQL, Redis --> without any previous Docker experience.
 
 #### Inspiration
 
