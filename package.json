@@ -14,9 +14,21 @@
   "bin": {
     "vail": "./src/index.js"
   },
+  "scripts": {
+    "lint": "eslint --ext .js,.jsx .",
+    "lint:fix": "eslint --ext .js,.jsx --fix .",
+    "prettier": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}'",
+    "prettier:fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'"
+  },
   "keywords": [],
   "dependencies": {
     "child_process": "^1.0.2",
     "inquirer": "^8.2.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.1"
   }
 }

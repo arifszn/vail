@@ -16,7 +16,6 @@ module.exports = {
   NODE_VERSIONS,
   NODE_14,
   NODE_16,
-  NODE_16,
   NODE_18,
   SERVICES,
 };
