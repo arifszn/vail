@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Execute the command given in the Docker command line
+exec "$@"

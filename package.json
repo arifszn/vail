@@ -1,0 +1,22 @@
+{
+  "name": "vail",
+  "version": "1.0.0",
+  "description": "Docker files for running a Nodejs application.",
+  "license": "MIT",
+  "author": "arifszn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arifszn/vail.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arifszn/vail/issues"
+  },
+  "bin": {
+    "vail": "./src/index.js"
+  },
+  "keywords": [],
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "inquirer": "^8.2.6"
+  }
+}
