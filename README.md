@@ -5,6 +5,36 @@
   <h1 align="center">Vail</h1>
 
   <h4 align="center">Dockerize Your JavaScript/TypeScript Apps Effortlessly.</h4>
+
+  <p align="center">
+    <a href="https://www.npmjs.com/package/vail">
+      <img src="https://img.shields.io/npm/v/vail"/>
+    </a>
+    <a href="https://www.npmjs.com/package/vail">
+      <img src="https://img.shields.io/npm/dt/vail"/>
+    </a>
+    <a href="https://github.com/arifszn/vail/actions/workflows/test.yml">
+      <img src="https://github.com/arifszn/vail/actions/workflows/test.yml/badge.svg"/>
+    </a>
+    <a href="https://github.com/arifszn/vail/issues">
+      <img src="https://img.shields.io/github/issues/arifszn/vail"/>
+    </a>
+    <a href="https://github.com/arifszn/vail/stargazers">
+      <img src="https://img.shields.io/github/stars/arifszn/vail"/>
+    </a>
+    <a href="https://github.com/arifszn/vail/blob/main/CONTRIBUTING.md">
+      <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
+    </a>
+    <a href="https://github.com/arifszn/vail/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/arifszn/vail"/>
+    </a>
+    <a href="https://www.buymeacoffee.com/arifszn">
+      <img src="https://img.shields.io/badge/sponsor-buy%20me%20a%20coffee-yellow?logo=buymeacoffee"/>
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://github.com/arifszn/vail&hashtags=javascript,nodejs,opensource,js,webdev,developers">
+      <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Farifszn%2Fvail"/>
+    </a>
+  </p>
 </p>
 
 ## Introduction
