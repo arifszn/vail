@@ -130,6 +130,7 @@ Vail supports the following services:
 
 - [Multiple Node version](#multiple-node-version)
 - [MySQL](#mysql)
+- [PostgreSQL](#postgresql)
 - [Adminer](#adminer)
 - [MinIO](#minio)
 - [Mailpit](#mailpit)
@@ -143,6 +144,17 @@ This service allows you to run your application with different Node.js versions 
 ### MySQL
 
 MySQL is a popular open-source relational database management system. Vail provides a pre-configured MySQL server.
+
+The default credentials:
+
+```
+Username: vail
+Password: password
+```
+
+### PostgreSQL
+
+PostgreSQL, often simply "Postgres", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards compliance.
 
 The default credentials:
 

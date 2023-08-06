@@ -1,0 +1,17 @@
+pgsql:
+    image: 'postgres:15'
+    ports:
+        - '${DB_PORT:-5432}:5432'
+    environment:
+        PGPASSWORD: '${DB_PASSWORD:-password}'
+        POSTGRES_DB: '${DB_DATABASE:-vail}'
+        POSTGRES_USER: '${DB_USERNAME:-vail}'
+        POSTGRES_PASSWORD: '${DB_PASSWORD:-password}'
+    volumes:
+        - 'vail-pgsql:/var/lib/postgresql/data'
+    networks:
+        - vail
+    healthcheck:
+        test: ["CMD", "pg_isready", "-q", "-d", "${DB_DATABASE:-vail}", "-U", "${DB_USERNAME:-vail}"]
+        retries: 3
+        timeout: 5s
