@@ -133,6 +133,7 @@ Vail supports the following services:
 - [Adminer](#adminer)
 - [MinIO](#minio)
 - [Mailpit](#mailpit)
+- [RabbitMQ](#rabbitmq)
 - More coming soon!
 
 ### Multiple Node version
@@ -187,6 +188,10 @@ Mailpit is an email testing tool for developers. It acts as both an SMTP server,
 You can send your emails to Mailpit SMTP server at `localhost:1025` and view them at the Mailpit web UI at `http://localhost:8025`.
 
 ![Mailpit](https://github.com/arifszn/vail/assets/45073703/9968631f-454e-4af2-9d22-a2f1cfbe640b)
+
+### RabbitMQ
+
+RabbitMQ is an open-source message-queueing software also known as a message broker or queue manager.
 
 ## Support
 

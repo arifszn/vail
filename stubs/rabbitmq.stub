@@ -1,0 +1,10 @@
+rabbitmq:
+    image: 'rabbitmq:3-management-alpine'
+    ports:
+        - '${RABBITMQ_PORT:-5672}:5672'
+        - '${RABBITMQ_DASHBOARD_PORT:-15672}:15672'
+    volumes:
+        - 'vail-rabbitmq:/var/lib/rabbitmq/'
+        - 'vail-rabbitmq:/var/log/rabbitmq'
+    networks:
+        - vail
