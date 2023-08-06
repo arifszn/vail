@@ -7,9 +7,6 @@ ARG VAIL_NODE_VERSION
 WORKDIR /var/www/html
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV TZ=UTC
-
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update \
     && apt-get install -y gnupg gosu curl ca-certificates zip unzip git \
@@ -34,5 +31,3 @@ COPY node_modules/vail/runtimes/start-container /usr/local/bin/start-container
 RUN chmod +x /usr/local/bin/start-container
 
 ENTRYPOINT ["start-container"]
-
-CMD echo "Vail is ready to be used!"
