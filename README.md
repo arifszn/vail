@@ -126,11 +126,54 @@ vail up
 
 Vail supports the following services:
 
-- Multiple Node version
-- MySQL
-- Adminer
-- MinIO
+- [Multiple Node version](#multiple-node-version)
+- [MySQL](#mysql)
+- [Adminer](#adminer)
+- [MinIO](#minio)
 - More coming soon!
+
+### Multiple Node version
+
+This service allows you to run your application with different Node.js versions without the need of installing them on your local machine. This gives you the flexibility of testing your application with various Node.js versions.
+
+### MySQL
+
+MySQL is a popular open-source relational database management system. Vail provides a pre-configured MySQL server.
+
+The default credentials:
+
+```
+Username: vail
+Password: password
+```
+
+### Adminer
+
+Adminer is a full-featured database management tool. It allows you to access and manage your databases, not only MySQL but also PostgreSQL and many other relational databases are supported.
+
+![Adminer](https://github.com/arifszn/vail/assets/45073703/3ab55913-6869-4dd1-a55f-ec1e87385aba)
+
+### MinIO
+
+MinIO delivers AWS S3 compatible high-performance object storage. It provides the ability to store large amounts of unstructured data. In Vail, a pre-configured MinIO server is included.
+
+MinIO can be used to mock AWS S3 bucket in the local development environment. This is particularly handy while developing features that interact with S3 but you don't want to incur unnecessary AWS costs. To setup MinIO to act as an AWS S3 bucket:
+
+1. Access the MinIO dashboard via `http://localhost:8900`.
+   ![MinIO dashboard](https://github.com/arifszn/vail/assets/45073703/49e33577-7674-4eff-b585-1c9b04a38706)
+2. Login using the MinIO root user and password provided in the Vail setup.
+
+   The default credentials:
+
+   ```
+   Username: vail
+   Password: password
+   ```
+
+3. Create a new bucket, which will act as your S3 bucket.
+4. For your application, use the MinIO host, bucket name, access key, and secret key in place of the AWS S3 details.
+
+For a more comprehensive guide on setting up MinIO and using it to simulate S3, refer to this [article](https://dev.to/arifszn/minio-mock-s3-in-local-development-4ke6).
 
 ## Support
 
