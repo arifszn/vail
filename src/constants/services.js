@@ -1,10 +1,11 @@
 const MY_SQL = 'mysql';
+const ADMINER = 'adminer';
 
 const NODE_14 = '14';
 const NODE_16 = '16';
 const NODE_18 = '18';
 
-const SERVICES = [MY_SQL];
+const SERVICES = [MY_SQL, ADMINER];
 
 const SERVICES_WITH_VOLUME = [MY_SQL];
 
