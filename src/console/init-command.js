@@ -80,7 +80,7 @@ const initCommand = async () => {
       type: 'input',
       name: 'ports',
       message:
-        'Enter the ports to be used, separated by comma (e.g., 3000,3001):',
+        'Enter the ports to be used for server, separated by comma (e.g., 3000,3001):',
       default: '3000',
     },
   ]);
