@@ -56,6 +56,18 @@ const writeDockerComposeFileWithService = (
     });
   }
 
+  // Add selected services as dependencies of the app service
+  if (selectedServices.length > 0) {
+    if (!parsedCompose.services.app.depends_on) {
+      parsedCompose.services.app.depends_on = [];
+    }
+    selectedServices.forEach((service) => {
+      if (!parsedCompose.services.app.depends_on.includes(service)) {
+        parsedCompose.services.app.depends_on.push(service);
+      }
+    });
+  }
+
   // Convert the JavaScript object back to YAML format
   const updatedComposeContent = yaml.dump(parsedCompose);
 

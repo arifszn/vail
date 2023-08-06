@@ -126,6 +126,7 @@ vail up
 
 Vail supports the following services:
 
+- Multiple Node version
 - MySQL
 
 ## Support
