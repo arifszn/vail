@@ -1,8 +1,17 @@
 const fs = require('fs');
 const path = require('path');
-const { displayErrorMessage, displaySuccessMessage } = require('../utils');
+const {
+  displayErrorMessage,
+  displaySuccessMessage,
+  writeDockerComposeFileWithService,
+} = require('../utils');
 const inquirer = require('inquirer');
-const { NODE_VERSIONS, NODE_16 } = require('../constants/services');
+const {
+  NODE_VERSIONS,
+  NODE_16,
+  SERVICES,
+  SERVICES_WITH_VOLUME,
+} = require('../constants/services');
 
 const initCommand = async () => {
   const dockerComposePath = path.resolve(process.cwd(), 'docker-compose.yml');
@@ -79,7 +88,7 @@ const initCommand = async () => {
   const ports = portsAnswer.ports.split(',').map((port) => port.trim());
 
   // Ask the user to select the services
-  /* const servicesAnswer = await inquirer.prompt([
+  const servicesAnswer = await inquirer.prompt([
     {
       type: 'checkbox',
       message: 'Select the services you want to include:',
@@ -89,7 +98,7 @@ const initCommand = async () => {
     },
   ]);
 
-  const selectedServices = servicesAnswer.services; */
+  const selectedServices = servicesAnswer.services;
 
   let dockerfileLocation = `./node_modules/vail/runtimes/${selectedPackageManager}`;
   if (!fs.existsSync(dockerfileLocation)) {
@@ -120,22 +129,11 @@ networks:
     driver: bridge
 `;
 
-  /* if (selectedServices.includes(MY_SQL)) {
-    dockerComposeContent += `
-    mysql:
-      # Add MySQL service configuration here
-  `;
-  }
-
-    if (selectedServices.includes('minio')) {
-      dockerComposeContent += `
-    minio:
-      # Add Minio service configuration here
-  `;
-    } */
-
-  // Write docker-compose.yml with the selected services
+  // Write docker-compose.yml
   fs.writeFileSync(dockerComposePath, dockerComposeContent);
+
+  // Call writeDockerComposeFile function with selected services and volumes
+  writeDockerComposeFileWithService(selectedServices, SERVICES_WITH_VOLUME);
 
   displaySuccessMessage('Vail successfully initialized.');
 };

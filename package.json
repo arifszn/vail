@@ -22,11 +22,13 @@
   },
   "files": [
     "src",
-    "runtimes"
+    "runtimes",
+    "stubs"
   ],
   "dependencies": {
     "child_process": "^1.0.2",
-    "inquirer": "^8.2.6"
+    "inquirer": "^8.2.6",
+    "js-yaml": "^4.1.0"
   },
   "devDependencies": {
     "eslint": "^8.46.0",
