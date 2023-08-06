@@ -8,11 +8,8 @@
     <a href="https://www.npmjs.com/package/vail">
       <img src="https://img.shields.io/npm/v/vail"/>
     </a>
-   <!--  <a href="https://www.npmjs.com/package/vail">
+    <a href="https://www.npmjs.com/package/vail">
       <img src="https://img.shields.io/npm/dt/vail"/>
-    </a> -->
-    <a href="https://github.com/arifszn/vail/actions/workflows/test.yml">
-      <img src="https://github.com/arifszn/vail/actions/workflows/test.yml/badge.svg"/>
     </a>
     <a href="https://github.com/arifszn/vail/issues">
       <img src="https://img.shields.io/github/issues/arifszn/vail"/>
@@ -107,6 +104,22 @@ Additionally, you can use Vail to run any command within the context of your app
 
 ```sh
 ./node_modules/.bin/vail exec app node --version
+```
+
+### Configuring A Shell Alias
+
+Instead of repeatedly typing `./node_modules/.bin/vail` to execute Vail commands, you may wish to configure a shell alias that allows you to execute Vail's commands more easily:
+
+```sh
+alias vail='[ -f vail ] && sh vail || sh node_modules/.bin/vail'
+```
+
+To make sure this is always available, you may add this to your shell configuration file in your home directory, such as ~/.zshrc or ~/.bashrc, and then restart your shell.
+
+Once the shell alias has been configured, you may execute Vail commands by simply typing vail.
+
+```sh
+vail up
 ```
 
 ## Support
