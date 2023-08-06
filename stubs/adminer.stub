@@ -4,4 +4,3 @@ adminer:
         - '${ADMINER_PORT:-8080}:8080'
     networks:
         - vail
-        
