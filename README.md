@@ -122,6 +122,12 @@ Once the shell alias has been configured, you may execute Vail commands by simpl
 vail up
 ```
 
+## Available Services
+
+Vail supports the following services:
+
+- MySQL
+
 ## Support
 
 <p>You can show your support by starring this project.</p>
