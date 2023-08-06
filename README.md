@@ -36,7 +36,9 @@
 
 ## Introduction
 
-**Vail** provides a Docker powered local development experience for JavaScript/TypeScript Apps that is compatible with macOS, Windows (WSL2), and Linux. Other than Docker, no software or libraries are required to be installed on your local computer before using Vail. Vail's simple CLI means you can start building your application with MySQL, Adminer, MinIO and other services without any previous Docker experience.
+**Vail** provides a Docker powered local development experience for JavaScript/TypeScript Apps that is compatible with macOS, Windows (WSL2), and Linux.
+
+Other than Docker, no software or libraries are required to be installed on your local computer before using Vail. Vail's simple CLI means you can start building your application with MySQL, Adminer, MinIO and other services without any previous Docker experience.
 
 #### Inspiration
 
@@ -130,6 +132,7 @@ Vail supports the following services:
 - [MySQL](#mysql)
 - [Adminer](#adminer)
 - [MinIO](#minio)
+- [Mailpit](#mailpit)
 - More coming soon!
 
 ### Multiple Node version
@@ -150,6 +153,8 @@ Password: password
 ### Adminer
 
 Adminer is a full-featured database management tool. It allows you to access and manage your databases, not only MySQL but also PostgreSQL and many other relational databases are supported.
+
+Adminer can be accessed at `http://localhost:8080` (default configuration).
 
 ![Adminer](https://github.com/arifszn/vail/assets/45073703/3ab55913-6869-4dd1-a55f-ec1e87385aba)
 
@@ -174,6 +179,14 @@ MinIO can be used to mock AWS S3 bucket in the local development environment. Th
 4. For your application, use the MinIO host, bucket name, access key, and secret key in place of the AWS S3 details.
 
 For a more comprehensive guide on setting up MinIO and using it to simulate S3, refer to this [article](https://dev.to/arifszn/minio-mock-s3-in-local-development-4ke6).
+
+### Mailpit
+
+Mailpit is an email testing tool for developers. It acts as both an SMTP server, and provides a web interface to view all captured emails.
+
+You can send your emails to Mailpit SMTP server at `localhost:1025` and view them at the Mailpit web UI at `http://localhost:8025`.
+
+![Mailpit](https://github.com/arifszn/vail/assets/45073703/9968631f-454e-4af2-9d22-a2f1cfbe640b)
 
 ## Support
 

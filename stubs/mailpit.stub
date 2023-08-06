@@ -1,0 +1,7 @@
+mailpit:
+    image: 'axllent/mailpit:latest'
+    ports:
+        - '${MAILPIT_PORT:-1025}:1025'
+        - '${MAILPIT_DASHBOARD_PORT:-8025}:8025'
+    networks:
+        - vail
