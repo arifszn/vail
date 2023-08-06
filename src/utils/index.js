@@ -44,12 +44,16 @@ const writeDockerComposeFileWithService = (
     }
   });
 
-  // Remove volumes if no services are selected
-  if (selectedServices.length === 0) {
+  const selectedServicesWithVolume = availableVolumes.filter((volume) =>
+    selectedServices.includes(volume),
+  );
+
+  if (selectedServicesWithVolume.length === 0) {
+    // Remove volumes if no services are selected
     delete parsedCompose.volumes;
   } else {
     // Add selected volumes to the volumes section
-    availableVolumes.forEach((volume) => {
+    selectedServicesWithVolume.forEach((volume) => {
       if (!(volume in parsedCompose.volumes)) {
         parsedCompose.volumes[`vail-${volume}`] = { driver: 'local' };
       }
