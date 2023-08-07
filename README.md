@@ -209,6 +209,10 @@ RabbitMQ is an open-source message-queueing software also known as a message bro
 
 Redis is an open-source in-memory data structure project implementing a distributed, in-memory key-value database with optional durability.
 
+### Memcached
+
+Memcached is a general-purpose distributed memory-caching system. It is often used to speed up dynamic database-driven websites by caching data and objects in RAM to reduce the number of times an external data source (such as a database or API) must be read.
+
 ## Support
 
 <p>You can show your support by starring this project.</p>
