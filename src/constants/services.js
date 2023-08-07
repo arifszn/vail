@@ -7,6 +7,7 @@ const PGSQL = 'pgsql';
 const REDIS = 'redis';
 const MEMCACHED = 'memcached';
 const MARIADB = 'mariadb';
+const MEILISEARCH = 'meilisearch';
 
 const NODE_14 = '14';
 const NODE_16 = '16';
@@ -22,9 +23,18 @@ const SERVICES = [
   REDIS,
   MEMCACHED,
   MARIADB,
+  MEILISEARCH,
 ];
 
-const SERVICES_WITH_VOLUME = [MY_SQL, MINIO, RABBITMQ, PGSQL, REDIS, MARIADB];
+const SERVICES_WITH_VOLUME = [
+  MY_SQL,
+  MINIO,
+  RABBITMQ,
+  PGSQL,
+  REDIS,
+  MARIADB,
+  MEILISEARCH,
+];
 
 const NODE_VERSIONS = [NODE_14, NODE_16, NODE_18];
 
