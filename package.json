@@ -27,7 +27,7 @@
   ],
   "dependencies": {
     "child_process": "^1.0.2",
-    "inquirer": "^8.2.6",
+    "inquirer": "^9.2.10",
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {
