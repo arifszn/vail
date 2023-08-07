@@ -32,7 +32,11 @@
   </p>
 </p>
 
-![preview](https://github.com/arifszn/vail/assets/45073703/245f4f93-6c8b-4fd6-8683-8bd713a0f3f7)
+<p align="center">
+  <img src="https://github.com/arifszn/vail/assets/45073703/b6f3bae6-62a4-45cf-8c15-1995f461a923" alt="Preview" width="60%"/>
+  <br/>
+  <img src="https://arifszn.netlify.app/assets/img/drop-shadow.png" width="50%" alt="Shadow"/>
+</p>
 
 ## Introduction
 
@@ -178,7 +182,9 @@ MinIO delivers AWS S3 compatible high-performance object storage. It provides th
 MinIO can be used to mock AWS S3 bucket in the local development environment. This is particularly handy while developing features that interact with S3 but you don't want to incur unnecessary AWS costs. To setup MinIO to act as an AWS S3 bucket:
 
 1. Access the MinIO dashboard via `http://localhost:8900`.
+
    ![MinIO dashboard](https://github.com/arifszn/vail/assets/45073703/49e33577-7674-4eff-b585-1c9b04a38706)
+
 2. Login using the MinIO root user and password provided in the Vail setup.
 
    The default credentials:
