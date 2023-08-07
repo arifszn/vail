@@ -130,12 +130,15 @@ Vail supports the following services:
 
 - [Multiple Node version](#multiple-node-version)
 - [MySQL](#mysql)
-- [PostgreSQL](#postgresql)
 - [Adminer](#adminer)
+- [Redis](#redis)
 - [MinIO](#minio)
 - [Mailpit](#mailpit)
+- [Meilisearch](#meilisearch)
+- [Memcached](#memcached)
 - [RabbitMQ](#rabbitmq)
-- [Redis](#redis)
+- [PostgreSQL](#postgresql)
+- [MariaDB](#mariadb)
 
 ### Multiple Node version
 
@@ -145,23 +148,12 @@ This service allows you to run your application with different Node.js versions 
 
 MySQL is a popular open-source relational database management system. Vail provides a pre-configured MySQL server.
 
-The default credentials:
+The default config:
 
-```
-Username: vail
-Password: password
-```
-
-### PostgreSQL
-
-PostgreSQL, often simply "Postgres", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards compliance.
-
-The default credentials:
-
-```
-Username: vail
-Password: password
-```
+- Host: mysql
+- Port: 3306
+- Username: vail
+- Password: password
 
 ### Adminer
 
@@ -170,6 +162,14 @@ Adminer is a full-featured database management tool. It allows you to access and
 Adminer can be accessed at `http://localhost:8080` (default configuration).
 
 ![Adminer](https://github.com/arifszn/vail/assets/45073703/3ab55913-6869-4dd1-a55f-ec1e87385aba)
+
+### Redis
+
+Redis is an open-source in-memory data structure project implementing a distributed, in-memory key-value database with optional durability.
+
+The default config:
+
+- Port: 6379
 
 ### MinIO
 
@@ -183,10 +183,8 @@ MinIO can be used to mock AWS S3 bucket in the local development environment. Th
 
    The default credentials:
 
-   ```
-   Username: vail
-   Password: password
-   ```
+   - Username: vail
+   - Password: password
 
 3. Create a new bucket, which will act as your S3 bucket.
 4. For your application, use the MinIO host, bucket name, access key, and secret key in place of the AWS S3 details.
@@ -201,32 +199,52 @@ You can send your emails to Mailpit SMTP server at `localhost:1025` and view the
 
 ![Mailpit](https://github.com/arifszn/vail/assets/45073703/9968631f-454e-4af2-9d22-a2f1cfbe640b)
 
-### RabbitMQ
+### Meilisearch
 
-RabbitMQ is an open-source message-queueing software also known as a message broker or queue manager.
+Meilisearch is an open-source search engine. It's a perfect fit for apps needing to deliver user-friendly, relevant and fast search.
 
-### Redis
+The default config:
 
-Redis is an open-source in-memory data structure project implementing a distributed, in-memory key-value database with optional durability.
+- Port: 7700
 
 ### Memcached
 
 Memcached is a general-purpose distributed memory-caching system. It is often used to speed up dynamic database-driven websites by caching data and objects in RAM to reduce the number of times an external data source (such as a database or API) must be read.
 
+The default config:
+
+- Port: 11211
+
+### RabbitMQ
+
+RabbitMQ is an open-source message-queueing software also known as a message broker or queue manager.
+
+The default config:
+
+- Port: 5672
+- Dashboard: `http://localhost:15672`
+
+### PostgreSQL
+
+PostgreSQL, also known as Postgres, is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards compliance.
+
+The default config:
+
+- Host: pgsql
+- Port: 3306
+- Username: vail
+- Password: password
+
 ### MariaDB
 
 MariaDB is a community-developed, commercially supported fork of the MySQL relational database management system, which provides similar features and interface.
 
-The default credentials:
+The default config:
 
-```
-Username: vail
-Password: password
-```
-
-### Meilisearch
-
-Meilisearch is an open-source search engine. It's a perfect fit for apps needing to deliver user-friendly, relevant and fast search.
+- Host: mariadb
+- Port: 3306
+- Username: vail
+- Password: password
 
 ## Support
 
