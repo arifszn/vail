@@ -96,7 +96,7 @@ To stop all of the containers, you may simply press Control + C to stop the cont
 
 ### Customization
 
-Since Vail is just Docker, you are free to customize nearly everything about it. After the installation, you may wish to change the env values or change the command to start your server in the `docker-compose.yml`` file. After doing so, rebuild your application's containers using the build command.
+Since Vail is just Docker, you are free to customize nearly everything about it. After the installation, you may wish to change the env values or change the command to start your server in the `docker-compose.yml` file. After doing so, rebuild your application's containers using the build command.
 
 ```sh
 ./node_modules/.bin/vail build --no-cache
