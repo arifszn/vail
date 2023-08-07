@@ -11,6 +11,7 @@ const {
   NODE_16,
   SERVICES,
   SERVICES_WITH_VOLUME,
+  DEFAULT_SELECTED_SERVICES,
 } = require('../constants/services');
 
 const initCommand = async () => {
@@ -94,7 +95,8 @@ const initCommand = async () => {
       message: 'Select the services you want to include:',
       name: 'services',
       choices: SERVICES,
-      default: [],
+      default: DEFAULT_SELECTED_SERVICES,
+      pageSize: SERVICES.length,
     },
   ]);
 
