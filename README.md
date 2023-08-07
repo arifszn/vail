@@ -135,7 +135,7 @@ Vail supports the following services:
 - [MinIO](#minio)
 - [Mailpit](#mailpit)
 - [RabbitMQ](#rabbitmq)
-- More coming soon!
+- [Redis](#redis)
 
 ### Multiple Node version
 
@@ -204,6 +204,10 @@ You can send your emails to Mailpit SMTP server at `localhost:1025` and view the
 ### RabbitMQ
 
 RabbitMQ is an open-source message-queueing software also known as a message broker or queue manager.
+
+### Redis
+
+Redis is an open-source in-memory data structure project implementing a distributed, in-memory key-value database with optional durability.
 
 ## Support
 
