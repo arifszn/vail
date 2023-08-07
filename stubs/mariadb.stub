@@ -1,0 +1,18 @@
+mariadb:
+    image: 'mariadb:10'
+    ports:
+        - '${DB_PORT:-3306}:3306'
+    environment:
+        MYSQL_ROOT_PASSWORD: '${DB_PASSWORD:-password}'
+        MYSQL_DATABASE: '${DB_DATABASE:-vail}'
+        MYSQL_USER: '${DB_USERNAME:-vail}'
+        MYSQL_PASSWORD: '${DB_PASSWORD:-password}'
+        MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes:
+        - 'vail-mariadb:/var/lib/mysql'
+    networks:
+        - vail
+    healthcheck:
+        test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}"]
+        retries: 3
+        timeout: 5s

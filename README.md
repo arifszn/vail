@@ -213,6 +213,17 @@ Redis is an open-source in-memory data structure project implementing a distribu
 
 Memcached is a general-purpose distributed memory-caching system. It is often used to speed up dynamic database-driven websites by caching data and objects in RAM to reduce the number of times an external data source (such as a database or API) must be read.
 
+### MariaDB
+
+MariaDB is a community-developed, commercially supported fork of the MySQL relational database management system, which provides similar features and interface.
+
+The default credentials:
+
+```
+Username: vail
+Password: password
+```
+
 ## Support
 
 <p>You can show your support by starring this project.</p>
