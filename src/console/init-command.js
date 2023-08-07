@@ -95,6 +95,7 @@ const initCommand = async () => {
       name: 'services',
       choices: SERVICES,
       default: [],
+      pageSize: SERVICES.length,
     },
   ]);
 
