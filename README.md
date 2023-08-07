@@ -224,6 +224,10 @@ Username: vail
 Password: password
 ```
 
+### Meilisearch
+
+Meilisearch is an open-source search engine. It's a perfect fit for apps needing to deliver user-friendly, relevant and fast search.
+
 ## Support
 
 <p>You can show your support by starring this project.</p>
