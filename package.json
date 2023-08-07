@@ -1,7 +1,7 @@
 {
   "name": "vail",
-  "version": "0.1.2",
-  "description": "Dockerize Your JavaScript/TypeScript Apps Effortlessly.",
+  "version": "0.2.0",
+  "description": "Docker powered local development experience for JavaScript/TypeScript Apps.",
   "license": "MIT",
   "author": "arifszn",
   "repository": {
