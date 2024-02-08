@@ -12,6 +12,9 @@ const MEILISEARCH = 'meilisearch';
 const NODE_14 = '14';
 const NODE_16 = '16';
 const NODE_18 = '18';
+const NODE_19 = '19';
+const NODE_20 = '20';
+const NODE_21 = '21';
 
 const SERVICES = [
   MY_SQL,
@@ -45,14 +48,14 @@ const DEFAULT_SELECTED_SERVICES = [
   MEILISEARCH,
 ];
 
-const NODE_VERSIONS = [NODE_14, NODE_16, NODE_18];
+const NODE_VERSIONS = [NODE_14, NODE_16, NODE_18, NODE_19, NODE_20, NODE_21];
+
+const DEFAULT_NODE_VERSION = NODE_21;
 
 // export all
 module.exports = {
   NODE_VERSIONS,
-  NODE_14,
-  NODE_16,
-  NODE_18,
+  DEFAULT_NODE_VERSION,
   SERVICES,
   SERVICES_WITH_VOLUME,
   DEFAULT_SELECTED_SERVICES,

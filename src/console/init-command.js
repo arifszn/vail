@@ -8,7 +8,7 @@ const {
 const inquirer = require('inquirer');
 const {
   NODE_VERSIONS,
-  NODE_16,
+  DEFAULT_NODE_VERSION,
   SERVICES,
   SERVICES_WITH_VOLUME,
   DEFAULT_SELECTED_SERVICES,
@@ -41,7 +41,7 @@ const initCommand = async () => {
       name: 'nodeVersion',
       message: 'Select Node.js version:',
       choices: NODE_VERSIONS,
-      default: NODE_16,
+      default: DEFAULT_NODE_VERSION,
     },
   ]);
 
