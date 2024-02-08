@@ -68,6 +68,23 @@ Alternatively, you can install via Yarn using this command:
 yarn add vail
 ```
 
+## Installing for Existing Applications (without having Nodejs locally)
+
+If you are developing an application with a team, you may not be the one that initially creates the application. Therefore, none of the application's node_module dependencies, including Vail, will be installed after you clone the application's repository to your local computer.
+
+You may install the application's node_module dependencies by navigating to the application's directory and executing the following command. This command uses a small Docker container containing Nodejs to install the application's dependencies, including Vail:
+
+```sh
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    node:20-slim \
+    npm install vail
+```
+
+When using the `node:20-slim` image, you should use the same version of Nodejs that you plan to use for your application.
+
 ### Setup
 
 After Vail has been installed, you may run the `vail init` command. This command will publish Vail's `docker-compose.yml` file to the root of your application:
