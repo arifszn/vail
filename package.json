@@ -1,6 +1,6 @@
 {
   "name": "vail",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Docker powered local development experience for JavaScript/TypeScript Apps.",
   "license": "MIT",
   "author": "arifszn",
@@ -11,6 +11,7 @@
   "bugs": {
     "url": "https://github.com/arifszn/vail/issues"
   },
+  "type": "module",
   "bin": {
     "vail": "./src/index.js"
   },
