@@ -1,22 +1,21 @@
-const fs = require('fs');
-const yaml = require('js-yaml');
-const path = require('path');
-
-const {
+import fs from 'fs';
+import yaml from 'js-yaml';
+import path from 'path';
+import {
   RED_COLOR_CODE,
   RESET_COLOR_CODE,
   GREEN_COLOR_CODE,
-} = require('../constants/color-codes');
+} from '../constants/color-codes.mjs';
 
-const displayErrorMessage = (message) => {
+export const displayErrorMessage = (message) => {
   console.log(`${RED_COLOR_CODE}${message}${RESET_COLOR_CODE}`);
 };
 
-const displaySuccessMessage = (message) => {
+export const displaySuccessMessage = (message) => {
   console.log(`${GREEN_COLOR_CODE}${message}${RESET_COLOR_CODE}`);
 };
 
-const writeDockerComposeFileWithService = (
+export const writeDockerComposeFileWithService = (
   selectedServices,
   availableVolumes,
 ) => {
@@ -77,10 +76,4 @@ const writeDockerComposeFileWithService = (
 
   // Write the updated YAML content to docker-compose.yml
   fs.writeFileSync(dockerComposePath, updatedComposeContent, 'utf8');
-};
-
-module.exports = {
-  displayErrorMessage,
-  displaySuccessMessage,
-  writeDockerComposeFileWithService,
 };
