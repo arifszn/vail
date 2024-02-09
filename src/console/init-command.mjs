@@ -122,7 +122,6 @@ services:
       ${ports.map((port) => `- '${port}:${port}'`).join('\n      ')}
     volumes:
       - .:/var/www/html
-      - /var/www/html/node_modules
     networks:
       - vail
 
