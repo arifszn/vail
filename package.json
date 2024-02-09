@@ -1,6 +1,6 @@
 {
   "name": "vail",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Docker powered local development experience for JavaScript/TypeScript Apps.",
   "license": "MIT",
   "author": "arifszn",
