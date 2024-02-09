@@ -1,20 +1,20 @@
-const fs = require('fs');
-const path = require('path');
-const {
+import fs from 'fs';
+import path from 'path';
+import {
   displayErrorMessage,
   displaySuccessMessage,
   writeDockerComposeFileWithService,
-} = require('../utils');
-const inquirer = require('inquirer');
-const {
+} from '../utils/index.mjs';
+import inquirer from 'inquirer';
+import {
   NODE_VERSIONS,
   DEFAULT_NODE_VERSION,
   SERVICES,
   SERVICES_WITH_VOLUME,
   DEFAULT_SELECTED_SERVICES,
-} = require('../constants/services');
+} from '../constants/services.mjs';
 
-const initCommand = async () => {
+export const initCommand = async () => {
   const dockerComposePath = path.resolve(process.cwd(), 'docker-compose.yml');
 
   // Check if docker-compose.yml is already present
@@ -139,5 +139,3 @@ networks:
 
   displaySuccessMessage('Vail successfully initialized.');
 };
-
-module.exports = { initCommand };

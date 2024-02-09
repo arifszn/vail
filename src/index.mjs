@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const { dockerComposeCommand } = require('./console/docker-compose-command');
-const { initCommand } = require('./console/init-command');
-const { INIT } = require('./constants/commands');
-const { displayErrorMessage } = require('./utils');
+import { dockerComposeCommand } from './console/docker-compose-command.mjs';
+import { initCommand } from './console/init-command.mjs';
+import { INIT } from './constants/commands.mjs';
+import { displayErrorMessage } from './utils/index.mjs';
 
 const command = process.argv[2];
 

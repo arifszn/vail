@@ -1,6 +1,6 @@
 {
   "name": "vail",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Docker powered local development experience for JavaScript/TypeScript Apps.",
   "license": "MIT",
   "author": "arifszn",
@@ -13,13 +13,13 @@
   },
   "type": "module",
   "bin": {
-    "vail": "./src/index.js"
+    "vail": "./src/index.mjs"
   },
   "scripts": {
-    "lint": "eslint --ext .js,.jsx .",
-    "lint:fix": "eslint --ext .js,.jsx --fix .",
-    "prettier": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}'",
-    "prettier:fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'"
+    "lint": "eslint --ext .js,.jsx,.mjs .",
+    "lint:fix": "eslint --ext .js,.jsx,.mjs --fix .",
+    "prettier": "prettier --check './**/*.{js,jsx,mjs,ts,tsx,css,md,json}'",
+    "prettier:fix": "prettier --write './**/*.{js,jsx,mjs,ts,tsx,css,md,json}'"
   },
   "files": [
     "src",

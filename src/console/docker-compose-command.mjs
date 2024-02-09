@@ -1,7 +1,7 @@
-const { execSync } = require('child_process');
-const { displayErrorMessage } = require('../utils');
+import { execSync } from 'child_process';
+import { displayErrorMessage } from '../utils/index.mjs';
 
-const dockerComposeCommand = async (processArgv) => {
+export const dockerComposeCommand = async (processArgv) => {
   try {
     // Execute the Docker Compose command using execSync
     execSync(`docker-compose ${processArgv.slice(2).join(' ')}`, {
@@ -12,5 +12,3 @@ const dockerComposeCommand = async (processArgv) => {
     process.exit(1);
   }
 };
-
-module.exports = { dockerComposeCommand };
