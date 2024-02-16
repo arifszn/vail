@@ -68,7 +68,7 @@ Alternatively, you can install via Yarn using this command:
 yarn add vail
 ```
 
-## Installing for Existing Applications (without having Nodejs locally)
+### Installing for Existing Applications (without having Nodejs locally)
 
 If you are developing an application with a team, you may not be the one that initially creates the application. Therefore, none of the application's node_module dependencies, including Vail, will be installed after you clone the application's repository to your local computer.
 
@@ -171,10 +171,10 @@ MySQL is a popular open-source relational database management system. Vail provi
 
 The default config:
 
-- Host: mysql
-- Port: 3306
-- Username: vail
-- Password: password
+- **Host:** mysql
+- **Port:** 3306
+- **Username:** vail
+- **Password:** password
 
 ### Adminer
 
@@ -190,7 +190,7 @@ Redis is an open-source in-memory data structure project implementing a distribu
 
 The default config:
 
-- Port: 6379
+- **Port:** 6379
 
 ### MinIO
 
@@ -206,8 +206,8 @@ MinIO can be used to mock AWS S3 bucket in the local development environment. Th
 
    The default credentials:
 
-   - Username: vail
-   - Password: password
+   - **Username:** vail
+   - **Password:** password
 
 3. Create a new bucket, which will act as your S3 bucket.
 4. For your application, use the MinIO host, bucket name, access key, and secret key in place of the AWS S3 details.
@@ -228,7 +228,7 @@ Meilisearch is an open-source search engine. It's a perfect fit for apps needing
 
 The default config:
 
-- Port: 7700
+- **Port:** 7700
 
 ### Memcached
 
@@ -236,7 +236,7 @@ Memcached is a general-purpose distributed memory-caching system. It is often us
 
 The default config:
 
-- Port: 11211
+- **Port:** 11211
 
 ### RabbitMQ
 
@@ -244,8 +244,7 @@ RabbitMQ is an open-source message-queueing software also known as a message bro
 
 The default config:
 
-- Port: 5672
-- Dashboard: `http://localhost:15672`
+- **Port:** 5672
 
 ### PostgreSQL
 
@@ -253,10 +252,10 @@ PostgreSQL, also known as Postgres, is an object-relational database management 
 
 The default config:
 
-- Host: pgsql
-- Port: 3306
-- Username: vail
-- Password: password
+- **Host:** pgsql
+- **Port:** 3306
+- **Username:** vail
+- **Password:** password
 
 ### MariaDB
 
@@ -264,10 +263,10 @@ MariaDB is a community-developed, commercially supported fork of the MySQL relat
 
 The default config:
 
-- Host: mariadb
-- Port: 3306
-- Username: vail
-- Password: password
+- **Host:** mariadb
+- **Port:** 3306
+- **Username:** vail
+- **Password:** password
 
 ## Support
 
