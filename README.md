@@ -35,7 +35,7 @@
 <p align="center">
   <img src="https://github.com/arifszn/vail/assets/45073703/b6f3bae6-62a4-45cf-8c15-1995f461a923" alt="Preview" width="60%"/>
   <br/>
-  <img src="https://arifszn.netlify.app/assets/img/drop-shadow.png" width="50%" alt="Shadow"/>
+  <img src="https://github.com/user-attachments/assets/54106eb3-70dd-422a-9243-45cf8e65c17b" width="50%" alt="Shadow"/>
 </p>
 
 ## Introduction
